@@ -162,52 +162,52 @@ list, not if it appears higher on the list."
     ("XeTeX" . xetex)))
 
 (defvar pandoc-options
-  '((read nil 'special)                         ; see pandoc-input-formats
-    (read-lhs nil 'special)                     ; input is literal Haskell
-    (write . "native" 'special)                 ; see pandoc-output-formats
-    (write-lhs nil 'special)                    ; output is literal Haskell
+  '((read                  nil      special)                 ; see pandoc-input-formats
+    (read-lhs              nil      special)                 ; input is literal Haskell
+    (write                 "native" special)                 ; see pandoc-output-formats
+    (write-lhs             nil      special)                 ; output is literal Haskell
 
-    (output nil 'filename)
+    (output                nil      filename)
 
-    (css nil 'filename)
+    (css                   nil      filename)
 
-    (include-in-header nil 'filepath 'markdown2pdf)
-    (include-before-body nil 'filepath 'markdown2pdf)
-    (include-after-body nil 'filepath 'markdown2pdf)
-    (custom-header nil 'filepath 'markdown2pdf)
-    (template nil 'filepath 'markdown2pdf)
-    (reference-odt nil 'filepath)
+    (include-in-header     nil filepath markdown2pdf)
+    (include-before-body   nil filepath markdown2pdf)
+    (include-after-body    nil filepath markdown2pdf)
+    (custom-header         nil filepath markdown2pdf)
+    (template              nil filepath markdown2pdf)
+    (reference-odt         nil filepath)
 
-    (tab-stop nil 'integer 'markdown2pdf)
+    (tab-stop              nil integer  markdown2pdf)
 
-    (mimetex nil 'string)
+    (mimetex               nil string)
 
-    (title-prefix nil 'string)
-    (latexmathml nil 'string)
-    (jsmath nil 'string)
-    (id-prefix nil 'string)
-    (indented-code-classes nil 'string)
+    (title-prefix          nil string)
+    (latexmathml           nil string)
+    (jsmath                nil string)
+    (id-prefix             nil string)
+    (indented-code-classes nil string)
 
-    (variable nil 'alist 'markdown2pdf)
+    (variable              nil alist    markdown2pdf)
 
-    (email-obfuscation nil 'special) ; NIL (="none"), "javascript" or "references"
+    (email-obfuscation     nil special) ; NIL (="none"), "javascript" or "references"
 
-    (gladtex nil 'bool)
-    (incremental nil 'bool)
-    (no-wrap nil 'bool)
-    (number-sections nil 'bool 'markdown2pdf)
-    (parse-raw nil 'bool 'markdown2pdf)
-    (preserve-tabs nil 'bool 'markdown2pdf)
-    (reference-links nil 'bool)
-    (sanitize-html nil 'bool)
-    (smart nil 'bool)
-    (standalone nil 'bool)
-    (strict nil 'bool 'markdown2pdf)
-    (table-of-contents nil 'bool 'markdown2pdf)
-    (xetex nil 'bool 'markdown2pdf)
+    (gladtex               nil bool)
+    (incremental           nil bool)
+    (no-wrap               nil bool)
+    (number-sections       nil bool     markdown2pdf)
+    (parse-raw             nil bool     markdown2pdf)
+    (preserve-tabs         nil bool     markdown2pdf)
+    (reference-links       nil bool)
+    (sanitize-html         nil bool)
+    (smart                 nil bool)
+    (standalone            nil bool)
+    (strict                nil bool     markdown2pdf)
+    (table-of-contents     nil bool     markdown2pdf)
+    (xetex                 nil bool     markdown2pdf)
 
     ;; this is not actually a pandoc option:
-    (output-dir nil 'special)) ; a directory path or NIL
+    (output-dir            nil special)) ; a directory path or NIL
   "List of pandoc option.")
 
 (defun pandoc-create-option-alist ()
