@@ -180,7 +180,7 @@ list, not if it appears higher on the list."
 
     (tab-stop              nil integer  markdown2pdf)
 
-    (mimetex               nil string)
+    (mimetex               nil special) ; a string, T or NIL
 
     (title-prefix          nil string)
     (latexmathml           nil string)
